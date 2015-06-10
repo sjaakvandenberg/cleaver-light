@@ -21,7 +21,7 @@ body {
 /* fade.jpg, wireballblack.png, space.png, snow2.jpg, pinstripe_rain.png, orion.jpg, nodes.jpg */
 
 #slide-1 {
-  background: #222 url(images/wireballblack.png) center center no-repeat;
+  background: #222 url(fade.jpg) center center no-repeat;
   background-size: cover;
   color: #fafafa;
 }
