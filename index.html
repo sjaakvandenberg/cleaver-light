@@ -1,0 +1,741 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Presentation Title</title>
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    /* Color Palette Based on Monokai
+
+          body : #fafafa, #191919
+    blockquote : #efefef, #444444
+         links : #1db4d0
+           pre : #272822, #75715e, #dddddd, #f92672,
+                 #a6e22e, #66d9ef, #bf79db
+*/
+
+/* Theme styles */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #191919;
+  background-color: #fafafa;
+  font-size: 100%;
+}
+
+/* custom slide styles */
+
+/* fade.jpg, wireballblack.png, space.png, snow2.jpg, pinstripe_rain.png, orion.jpg, nodes.jpg */
+
+#slide-1 {
+  background: #222 url(fade.jpg) center center no-repeat;
+  background-size: cover;
+  color: #fafafa;
+}
+
+#slide-1 h1 {
+  text-shadow: 1px 2px 4px #191919;
+}
+
+#slide-1 p {
+  text-shadow: 1px 1px 1px #191919;
+}
+
+.center {
+  text-align: center;
+}
+
+img.badge {
+  height: 128px;
+  width: 128px !important;
+  border-radius: 50% !important;
+}
+
+/* presentation styles */
+
+.slide {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  padding: 100px;
+}
+
+.slide-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+
+  font-weight: 200;
+  font-size: 200%;
+  line-height: 1.375;
+}
+
+.slide-content img {
+  border-radius: 3px;
+  width: 100%;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.arrow {
+  width: 0; height: 0;
+  border: 15px solid #efefef;
+  float: left;
+  margin-right: 15px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.prev {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+
+  border-left-width: 0;
+  border-right-width: 25px;
+}
+
+.next {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+
+  border-left-width: 25px;
+  border-right-width: 0;
+}
+
+.prev:hover {
+  border-right-color: #444;
+  cursor: pointer;
+}
+
+.next:hover {
+  border-left-color: #444;
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-size: 300%;
+  line-height: 1.2;
+  text-align: center;
+  margin: 170px 0 0;
+}
+
+h2 {
+  font-size: 100%;
+  line-height: 1.2;
+  margin: 5px 0;
+  text-align: center;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 140%;
+  line-height: 1.2;
+  border-bottom: 2px ridge #191919;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+ul {
+  padding: 20px 0 0 60px;
+  font-weight: 200;
+  line-height: 1.375;
+}
+
+blockquote {
+  background: #efefef;
+  margin-left: 0;
+  padding-left: 20px;
+  border-left: 5px solid #444;
+  border-radius: 0 3px 3px 0;
+}
+
+blockquote p {
+  color: #444;
+  padding: 0.5em;
+}
+
+.left {
+  float: left;
+  width: 48%;
+}
+
+.right {
+  float: right;
+  width: 48%;
+}
+
+.author h1 {
+  font-size: 170%;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.author h3 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 95%;
+  border: none;
+}
+
+.author h3.twitter::before {
+  content: 'Twitter: '
+}
+
+.author h3.github::before {
+  content: 'Github: '
+}
+
+.author h3.email::before {
+  content: 'Email: '
+}
+
+.author h3.url::before {
+  content: 'Web: '
+}
+
+a {
+  text-decoration: none;
+  color: #1DB4D0;
+}
+
+a:hover {
+  color: #1DB4D0;
+  border-bottom: 1px solid #1DB4D0;
+}
+
+pre {
+  font-size: 75%;
+  line-height: 1.3;
+}
+
+table td, table th {
+  padding-right: 3em;
+  text-align: left;
+}
+
+.progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 3px;
+  background-color: #A6E22E;
+
+  -webkit-transition: width 0.15s ease-out;
+  -moz-transition: width 0.15s ease-out;
+  -o-transition: width 0.15s ease-out;
+  transition: width 0.15s ease-out;
+}
+
+.hidden {
+  display: none;
+}
+
+/* code highlighting */
+
+code {
+  background-color: #272822;
+  border-radius: 3px;
+  color: #fafafa;
+  padding: 0.1em 0.35em;
+}
+
+pre code {
+  display: block;
+  font-family: 'Source Code Pro';
+  font-weight: 400;
+  padding: 0.5em;
+  background: #272822;
+  overflow-y: hidden;
+}
+
+pre .tag,
+pre .tag .title,
+pre .keyword,
+pre .literal,
+pre .change,
+pre .winutils,
+pre .flow,
+pre .lisp .title,
+pre .clojure .built_in,
+pre .nginx .title,
+pre .tex .special {
+  color: #F92672;
+}
+
+pre code {
+  color: #DDD;
+}
+
+pre code .constant {
+  color: #66D9EF;
+}
+
+pre .class .title {
+  color: white;
+}
+
+pre .attribute,
+pre .symbol,
+pre .symbol .string,
+pre .value,
+pre .regexp {
+  color: #BF79DB;
+}
+
+pre .tag .value,
+pre .string,
+pre .subst,
+pre .title,
+pre .haskell .type,
+pre .preprocessor,
+pre .ruby .class .parent,
+pre .built_in,
+pre .sql .aggregate,
+pre .django .template_tag,
+pre .django .variable,
+pre .smalltalk .class,
+pre .javadoc,
+pre .django .filter .argument,
+pre .smalltalk .localvars,
+pre .smalltalk .array,
+pre .attr_selector,
+pre .pseudo,
+pre .addition,
+pre .stream,
+pre .envvar,
+pre .apache .tag,
+pre .apache .cbracket,
+pre .tex .command,
+pre .prompt {
+  color: #A6E22E;
+}
+
+pre .comment,
+pre .java .annotation,
+pre .python .decorator,
+pre .template_comment,
+pre .pi,
+pre .doctype,
+pre .deletion,
+pre .shebang,
+pre .apache .sqbracket,
+pre .tex .formula {
+  color: #75715E;
+}
+
+pre .keyword,
+pre .literal,
+pre .css .id,
+pre .phpdoc,
+pre .title,
+pre .haskell .type,
+pre .vbscript .built_in,
+pre .sql .aggregate,
+pre .rsl .built_in,
+pre .smalltalk .class,
+pre .diff .header,
+pre .chunk,
+pre .winutils,
+pre .bash .variable,
+pre .apache .tag,
+pre .tex .special,
+pre .request,
+pre .status {
+  font-weight: 600;
+}
+
+pre .coffeescript .javascript,
+pre .javascript .xml,
+pre .tex .formula,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .xml .css,
+pre .xml .cdata {
+  opacity: 0.5;
+}
+
+/* responsiveness */
+
+@media (max-width: 850px) {
+
+  body {
+    font-size: 70%;
+  }
+
+  .slide-content {
+    width: auto;
+  }
+
+  img {
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  h1 {
+    margin-top: 120px;
+  }
+
+  .prev, .prev:hover {
+    border-right-color: rgba(135, 135, 135, 0.5);
+  }
+
+  .next, .next:hover {
+    border-left-color: rgba(135, 135, 135, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 50%;
+    overflow: hidden;
+  }
+
+  .slide-content {
+    padding: 10px;
+    margin-top: 10px;
+    height: 340px;
+  }
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  ul {
+    padding-left: 25px;
+  }
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+
+  @page {
+    size: letter;
+  }
+
+  .hidden {
+    display: inline;
+  }
+
+  html {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  body {
+    margin: 0 auto !important;
+    border: 0;
+    padding: 0;
+    float: none !important;
+    overflow: visible;
+    background: none !important;
+    font-size: 52%;
+  }
+
+  .progress, .controls {
+    display: none;
+  }
+
+  .slide {
+    position: static;
+  }
+
+  .slide-content {
+    border: 1px solid #222;
+    margin-top: 0;
+    margin-bottom: 40px;
+    height: 3.5in;
+    overflow: visible;
+  }
+
+  .slide:nth-child(even) {
+    /* 2 slides per page */
+    page-break-before: always;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+
+  <div class="slide  center" id="slide-1">
+    <section class="slide-content"><h1 id="presentation-title">Presentation Title</h1>
+<p><strong><em>Lorem ipsum subtitle dolor sit amet</em></strong></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-2">
+    <section class="slide-content"><h3 id="cleaver-dark">Cleaver Dark</h3>
+<p><strong>Cleaver</strong> <em>Dark</em> builds on <a href="http://github.com/jdan/cleaver-retro">Cleaver Retro</a>, uses <strong><em>Open Sans</em></strong> for the body text, Merriweather for the headings and Adobe&#39;s Source Code Pro for <code>code</code>.</p>
+<hr>
+<blockquote>
+<p>It&#39;s pretty cool.</p>
+</blockquote>
+<p>By <a href="https://twitter.com/svdb">@svdb</a>.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-3">
+    <section class="slide-content"><p><img src="http://placehold.it/1500x500" alt="test"></p>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Item 1</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>Item B</td>
+<td>Blue</td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-4">
+    <section class="slide-content"><div class="left">
+<img src="http://placehold.it/1500x800" alt="test">
+</div>
+<div class="right">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit aliquam aliquam. Nulla ultricies nisi quis leo gravida, lacinia auctor nisl dignissim.
+</div></section>
+  </div>
+  <div class="slide hidden" id="slide-5">
+    <section class="slide-content"><h3 id="a-list-of-things">A list of things</h3>
+<ul>
+<li>Item 1</li>
+<li>Item B</li>
+<li>Item gamma</li>
+</ul>
+<p>No need for multiple templates! <a href="http://google.com">Another link</a>.</p>
+<p>More text.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-6">
+    <section class="slide-content"><h3 id="unicode">Unicode</h3>
+<ul>
+<li>██████████ █████</li>
+<li>林花謝了春紅 太匆匆</li>
+<li>胭脂淚 留人醉 幾時重</li>
+<li>Matching Pairs «»‹› “”‘’「」〈〉《》〔〕</li>
+<li>Greek αβγδ εζηθ ικλμ νξοπ ρςτυ φχψω</li>
+<li>currency  ¤ $ ¢ € ₠ £ ¥</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-7">
+    <section class="slide-content"><pre><code class="lang-ruby"><span class="class"><span class="keyword">class</span> <span class="title">Doge</span></span>
+  <span class="function"><span class="keyword">def</span> <span class="title">bark</span></span>
+    puts <span class="string">"Woof!"</span>
+  <span class="keyword">end</span>
+<span class="keyword">end</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-8">
+    <section class="slide-content"><h3 id="a-code-example">A code example</h3>
+<pre><code class="lang-ruby"><span class="comment"># comment</span>
+<span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>
+  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(name, color, bark)</span></span>
+    <span class="comment"># code</span>
+  <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+skippy = <span class="constant">Dog</span>.new()
+skippy.bark()</code></pre>
+<p>And here is some <code>inline code</code> to check out.</p>
+</section>
+  </div>
+  <div class="slide hidden  center" id="slide-9">
+    <section class="slide-content"><p><img class="badge" src="https://pbs.twimg.com/profile_images/527211840250474496/UmC1pY-x.png" alt="@svdb"></p>
+<h3 id="sjaak-van-den-berg">Sjaak van den Berg</h3>
+<p>Email: <a href="mailto:mail@svdb.co">mail@svdb.co</a><br />
+Twitter: <a href="#">@svdb</a><br />
+Web: <a href="http://svdb.co">svdb.co</a></p>
+</section>
+  </div>
+
+
+
+  <script type="text/javascript">
+    /**
+ * Returns the current page number of the presentation.
+ */
+function currentPosition() {
+  return parseInt(document.querySelector('.slide:not(.hidden)').id.slice(6));
+}
+
+
+/**
+ * Navigates forward n pages
+ * If n is negative, we will navigate in reverse
+ */
+function navigate(n) {
+  var position = currentPosition();
+  var numSlides = document.getElementsByClassName('slide').length;
+
+  /* Positions are 1-indexed, so we need to add and subtract 1 */
+  var nextPosition = (position - 1 + n) % numSlides + 1;
+
+  /* Normalize nextPosition in-case of a negative modulo result */
+  nextPosition = (nextPosition - 1 + numSlides) % numSlides + 1;
+
+  document.getElementById('slide-' + position).classList.add('hidden');
+  document.getElementById('slide-' + nextPosition).classList.remove('hidden');
+
+  updateProgress();
+  updateURL();
+  updateTabIndex();
+}
+
+
+/**
+ * Updates the current URL to include a hashtag of the current page number.
+ */
+function updateURL() {
+  window.history.replaceState({} , null, '#' + currentPosition());
+}
+
+
+/**
+ * Sets the progress indicator.
+ */
+function updateProgress() {
+  var progressBar = document.querySelector('.progress-bar');
+
+  if (progressBar !== null) {
+    var numSlides = document.getElementsByClassName('slide').length;
+    var position = currentPosition() - 1;
+    var percent = (numSlides === 1) ? 100 : 100 * position / (numSlides - 1);
+    progressBar.style.width = percent.toString() + '%';
+  }
+}
+
+
+/**
+ * Removes tabindex property from all links on the current slide, sets
+ * tabindex = -1 for all links on other slides. Prevents slides from appearing
+ * out of control.
+ */
+function updateTabIndex() {
+  var allLinks = document.querySelectorAll('.slide a');
+  var position = currentPosition();
+  var currentPageLinks = document.getElementById('slide-' + position).querySelectorAll('a');
+  var i;
+
+  for (i = 0; i < allLinks.length; i++) {
+    allLinks[i].setAttribute('tabindex', -1);
+  }
+
+  for (i = 0; i < currentPageLinks.length; i++) {
+    currentPageLinks[i].removeAttribute('tabindex');
+  }
+}
+
+/**
+ * Determines whether or not we are currently in full screen mode
+ */
+function isFullScreen() {
+  return document.fullscreenElement ||
+         document.mozFullScreenElement ||
+         document.webkitFullscreenElement ||
+         document.msFullscreenElement;
+}
+
+/**
+ * Toggle fullScreen mode on document element.
+ * Works on chrome (>= 15), firefox (>= 9), ie (>= 11), opera(>= 12.1), safari (>= 5).
+ */
+function toggleFullScreen() {
+  /* Convenient renames */
+  var docElem = document.documentElement;
+  var doc = document;
+
+  docElem.requestFullscreen =
+      docElem.requestFullscreen ||
+      docElem.msRequestFullscreen ||
+      docElem.mozRequestFullScreen ||
+      docElem.webkitRequestFullscreen.bind(docElem, Element.ALLOW_KEYBOARD_INPUT);
+
+  doc.exitFullscreen =
+      doc.exitFullscreen ||
+      doc.msExitFullscreen ||
+      doc.mozCancelFullScreen ||
+      doc.webkitExitFullscreen;
+
+  isFullScreen() ? doc.exitFullscreen() : docElem.requestFullscreen();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Update the tabindex to prevent weird slide transitioning
+  updateTabIndex();
+
+  // If the location hash specifies a page number, go to it.
+  var page = window.location.hash.slice(1);
+  if (page) {
+    navigate(parseInt(page) - 1);
+  }
+
+  document.onkeydown = function (e) {
+    var kc = e.keyCode;
+
+    // left, down, H, J, backspace, PgUp - BACK
+    // up, right, K, L, space, PgDn - FORWARD
+    // enter - FULLSCREEN
+    if (kc === 37 || kc === 40 || kc === 8 || kc === 72 || kc === 74 || kc === 33) {
+      navigate(-1);
+    } else if (kc === 38 || kc === 39 || kc === 32 || kc === 75 || kc === 76 || kc === 34) {
+      navigate(1);
+    } else if (kc === 13) {
+      toggleFullScreen();
+    }
+  };
+
+  if (document.querySelector('.next') && document.querySelector('.prev')) {
+    document.querySelector('.next').onclick = function (e) {
+      e.preventDefault();
+      navigate(1);
+    };
+
+    document.querySelector('.prev').onclick = function (e) {
+      e.preventDefault();
+      navigate(-1);
+    };
+  }
+});
+
+  </script>
+</body>
+</html>
