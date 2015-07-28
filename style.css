@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700,600,800,400&subset=latin,latin-ext);
 /* Color Palette Based on Monokai
 
           body : #fafafa, #191919
@@ -61,7 +61,7 @@ img.badge {
   margin: 0 auto;
   padding: 0;
 
-  font-weight: 200;
+  font-weight: 300;
   font-size: 200%;
   line-height: 1.375;
 }
@@ -135,7 +135,7 @@ h2 {
   line-height: 1.2;
   margin: 5px 0;
   text-align: center;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h3 {
@@ -148,7 +148,7 @@ h3 {
 
 ul {
   padding: 20px 0 0 60px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.375;
 }
 
@@ -177,13 +177,13 @@ blockquote p {
 
 .author h1 {
   font-size: 170%;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
   margin-bottom: 30px;
 }
 
 .author h3 {
-  font-weight: 100;
+  font-weight: 300;
   text-align: center;
   font-size: 95%;
   border: none;
@@ -258,7 +258,7 @@ code {
 pre code {
   display: block;
   font-family: 'Source Code Pro';
-  font-weight: 400;
+  : 400;
   padding: 0.5em;
   background: #272822;
   overflow-y: hidden;
