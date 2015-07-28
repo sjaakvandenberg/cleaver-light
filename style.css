@@ -71,9 +71,10 @@ img.badge {
 }
 
 .controls {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+/*  position: absolute; */
+  bottom: 10px; 
+  left: 10px; */
+  display: none;
 }
 
 .arrow {
