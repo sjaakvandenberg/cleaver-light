@@ -357,20 +357,6 @@ pre .xml .cdata {
   opacity: 0.5;
 }
 
-/* line numbering */
-
-pre {
-	counter-reset: linecounter;
-}
-pre span{
-	counter-increment: linecounter;
-}
-pre span:before{
-	content: counter(linecounter);
-	width: 2em;
-	display: inline-block;
-	border-right: 1px solid #444;
-}
 
 /* responsiveness */
 
