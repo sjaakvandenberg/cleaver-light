@@ -23,7 +23,7 @@ body {
 /* fade.jpg, wireballblack.png, space.png, snow2.jpg, pinstripe_rain.png, orion.jpg, nodes.jpg */
 
 #slide-1 h1 {
-  text-shadow: 1px 2px 4px #191919;
+  text-shadow: 1px 2px 1px #191919;
 }
 
 #slide-1 p {
