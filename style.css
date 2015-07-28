@@ -13,7 +13,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #191919;
   background-color: #fafafa;
-  font-size: 100%;
+  font-size: 150%;
 }
 
 /* custom slide styles */
@@ -119,7 +119,7 @@ img.badge {
 }
 
 h1, h2, h3 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -215,7 +215,7 @@ a:hover {
 }
 
 pre {
-  font-size: 75%;
+  font-size: 100%;
   line-height: 1.3;
 }
 
