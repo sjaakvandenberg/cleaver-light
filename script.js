@@ -1,15 +1,9 @@
-/**
- * Returns the current page number of the presentation.
- */
+/* Returns the current page number of the presentation */
 function currentPosition() {
   return parseInt(document.querySelector('.slide:not(.hidden)').id.slice(6));
 }
 
-
-/**
- * Navigates forward n pages
- * If n is negative, we will navigate in reverse
- */
+/* Navigates forward n pages (navigate in reverse if n is negative) */
 function navigate(n) {
   var position = currentPosition();
   var numSlides = document.getElementsByClassName('slide').length;
@@ -28,18 +22,12 @@ function navigate(n) {
   updateTabIndex();
 }
 
-
-/**
- * Updates the current URL to include a hashtag of the current page number.
- */
+/* Updates the current URL to include a hashtag of the current page number */
 function updateURL() {
-  window.history.replaceState({} , null, '#' + currentPosition());
+  window.location.hash = currentPosition();
 }
 
-
-/**
- * Sets the progress indicator.
- */
+/* Sets the progress indicator */
 function updateProgress() {
   var progressBar = document.querySelector('.progress-bar');
 
@@ -50,7 +38,6 @@ function updateProgress() {
     progressBar.style.width = percent.toString() + '%';
   }
 }
-
 
 /**
  * Removes tabindex property from all links on the current slide, sets
@@ -72,9 +59,7 @@ function updateTabIndex() {
   }
 }
 
-/**
- * Determines whether or not we are currently in full screen mode
- */
+/* Determines whether or not we are currently in full screen mode */
 function isFullScreen() {
   return document.fullscreenElement ||
          document.mozFullScreenElement ||
