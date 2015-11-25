@@ -4,36 +4,188 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>Presentation Title</title>
-  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <style type="text/css">
     /* Color Palette Based on Monokai
 
-          body : #fafafa, #191919
-    blockquote : #efefef, #444444
-         links : #1db4d0
-           pre : #272822, #75715e, #dddddd, #f92672,
-                 #a6e22e, #66d9ef, #bf79db
+white       : #fafafa
+light grey  : #efefef
+grey        : #75715e
+dark grey   : #272822
+black       : #191919
+
+light blue  : #66d9ef
+blue        : #1db4d0
+lavender    : #bf79db
+magenta     : #f92672
+light green : #a6e22e
 */
 
-/* Theme styles */
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: #191919;
-  background-color: #fafafa;
-  font-size: 100%;
+/* Local Fonts */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/opensans/300.woff2') format('woff2'),
+       url('fonts/opensans/300.woff') format('woff');
 }
 
-/* custom slide styles */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/opensans/400.woff2') format('woff2'),
+       url('fonts/opensans/400.woff') format('woff');
+}
 
-/* fade.jpg, wireballblack.png, space.png, snow2.jpg, pinstripe_rain.png, orion.jpg, nodes.jpg */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/opensans/600.woff2') format('woff2'),
+       url('fonts/opensans/600.woff') format('woff');
+}
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/opensans/700.woff2') format('woff2'),
+       url('fonts/opensans/700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/opensans/800.woff2') format('woff2'),
+       url('fonts/opensans/800.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: url('fonts/opensans/300i.woff2') format('woff2'),
+       url('fonts/opensans/300i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/opensans/400i.woff2') format('woff2'),
+       url('fonts/opensans/400i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: url('fonts/opensans/600i.woff2') format('woff2'),
+       url('fonts/opensans/600i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('fonts/opensans/700i.woff2') format('woff2'),
+       url('fonts/opensans/700i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: url('fonts/opensans/800i.woff2') format('woff2'),
+       url('fonts/opensans/800i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/merriweather/400.woff2') format('woff2'),
+       url('fonts/merriweather/400.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/merriweather/700.woff2') format('woff2'),
+       url('fonts/merriweather/700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts/merriweather/900.woff2') format('woff2'),
+       url('fonts/merriweather/900.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/merriweather/400i.woff2') format('woff2'),
+       url('fonts/merriweather/400i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: url('fonts/merriweather/700i.woff2') format('woff2'),
+       url('fonts/merriweather/700i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 900;
+  src: url('fonts/merriweather/900i.woff2') format('woff2'),
+       url('fonts/merriweather/900i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/fira/400.woff2') format('woff2'),
+       url('fonts/fira/400.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/fira/500.woff2') format('woff2'),
+       url('fonts/fira/500.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/fira/700.woff2') format('woff2'),
+       url('fonts/fira/700.woff') format('woff');
+}
+
+/* Theme Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+  color: #191919;
+  background-color: #fafafa;
+}
+
+/* Custom Slide Styles */
 #slide-1 {
-  background: #222 url(fade.jpg) center center no-repeat;
-  background-size: cover;
   color: #fafafa;
+  background: #222 url('fade.jpg') center center no-repeat;
+  background-size: cover;
 }
 
 #slide-1 h1 {
@@ -54,30 +206,30 @@ img.badge {
   border-radius: 50% !important;
 }
 
-/* presentation styles */
-
+/* Presentation Styles */
 .slide {
   position: absolute;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   padding: 100px;
 }
 
 .slide-content {
-  width: 100%;
   height: 100%;
-  overflow: hidden;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
-
-  font-weight: 200;
   font-size: 200%;
+  font-weight: 200;
   line-height: 1.375;
+  overflow: hidden;
 }
 
 .slide-content img {
-  border-radius: 3px;
   width: 100%;
+  border-radius: 3px;
 }
 
 .controls {
@@ -87,91 +239,91 @@ img.badge {
 }
 
 .arrow {
-  width: 0; height: 0;
-  border: 15px solid #efefef;
   float: left;
+  height: 0;
+  width: 0;
   margin-right: 15px;
-
+  border: 15px solid #efefef;
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .prev {
   border-top-color: transparent;
+  border-right-width: 25px;
   border-bottom-color: transparent;
   border-left-color: transparent;
-
   border-left-width: 0;
-  border-right-width: 25px;
 }
 
 .next {
   border-top-color: transparent;
-  border-bottom-color: transparent;
   border-right-color: transparent;
-
-  border-left-width: 25px;
   border-right-width: 0;
+  border-bottom-color: transparent;
+  border-left-width: 25px;
 }
 
 .prev:hover {
-  border-right-color: #444;
+  border-right-color: #272822;
   cursor: pointer;
 }
 
 .next:hover {
-  border-left-color: #444;
+  border-left-color: #272822;
   cursor: pointer;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Merriweather', serif;
 }
 
 h1 {
-  font-size: 300%;
-  line-height: 1.2;
-  text-align: center;
   margin: 170px 0 0;
+  font-size: 300%;
+  text-align: center;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 100%;
-  line-height: 1.2;
   margin: 5px 0;
-  text-align: center;
+  font-size: 100%;
   font-weight: 200;
+  text-align: center;
+  line-height: 1.2;
 }
 
 h3 {
+  margin: 0;
+  padding-bottom: 15px;
   font-size: 140%;
   line-height: 1.2;
   border-bottom: 2px ridge #191919;
-  margin: 0;
-  padding-bottom: 15px;
 }
 
 ul {
-  padding: 20px 0 0 60px;
   font-weight: 200;
   line-height: 1.375;
+  padding: 20px 0 0 60px;
 }
 
 blockquote {
-  background: #efefef;
-  margin-left: 0;
   padding-left: 20px;
-  border-left: 5px solid #444;
+  margin-left: 0;
+  background: #efefef;
+  border-left: 5px solid #272822;
   border-radius: 0 3px 3px 0;
 }
 
 blockquote p {
-  color: #444;
-  padding: 0.5em;
+  padding: .5em;
+  color: #272822;
 }
 
 .left {
@@ -185,43 +337,47 @@ blockquote p {
 }
 
 .author h1 {
+  margin-bottom: 30px;
   font-size: 170%;
   font-weight: 200;
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .author h3 {
+  font-size: 95%;
   font-weight: 100;
   text-align: center;
-  font-size: 95%;
   border: none;
 }
 
 .author h3.twitter::before {
-  content: 'Twitter: '
+  content: 'Twitter: ';
 }
 
 .author h3.github::before {
-  content: 'Github: '
+  content: 'Github: ';
 }
 
 .author h3.email::before {
-  content: 'Email: '
+  content: 'Email: ';
 }
 
 .author h3.url::before {
-  content: 'Web: '
+  content: 'Web: ';
 }
 
 a {
   text-decoration: none;
-  color: #1DB4D0;
+  color: #1db4d0;
 }
 
 a:hover {
-  color: #1DB4D0;
-  border-bottom: 1px solid #1DB4D0;
+  color: #1db4d0;
+  border-bottom: 1px solid #1db4d0;
+}
+
+hr {
+  border: 1px solid #272822;
 }
 
 pre {
@@ -229,48 +385,50 @@ pre {
   line-height: 1.3;
 }
 
-table td, table th {
+table td,
+table th {
   padding-right: 3em;
   text-align: left;
 }
 
 .progress {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  right: 0;
+  left: 0;
   height: 3px;
 }
 
 .progress-bar {
-  width: 0%;
   height: 3px;
-  background-color: #A6E22E;
-
-  -webkit-transition: width 0.15s ease-out;
-  -moz-transition: width 0.15s ease-out;
-  -o-transition: width 0.15s ease-out;
-  transition: width 0.15s ease-out;
+  width: 0;
+  background-color: #a6e22e;
+  -webkit-transition: width .15s ease-out;
+     -moz-transition: width .15s ease-out;
+       -o-transition: width .15s ease-out;
+          transition: width .15s ease-out;
 }
 
 .hidden {
   display: none;
 }
 
-/* code highlighting */
-
+/* Code Highlighting */
 code {
+  padding: .1em .35em;
+  font-family: 'Fira Mono';
+  color: #fafafa;
   background-color: #272822;
   border-radius: 3px;
-  color: #fafafa;
-  padding: 0.1em 0.35em;
 }
 
 pre code {
   display: block;
-  font-family: 'Source Code Pro';
+  padding: .5em;
+  font-family: 'Fira Mono';
   font-weight: 400;
-  padding: 0.5em;
-  background: #272822;
   overflow-y: hidden;
+  background: #272822;
 }
 
 pre .tag,
@@ -284,19 +442,19 @@ pre .lisp .title,
 pre .clojure .built_in,
 pre .nginx .title,
 pre .tex .special {
-  color: #F92672;
+  color: #f92672;
 }
 
 pre code {
-  color: #DDD;
+  color: #75715e;
 }
 
 pre code .constant {
-  color: #66D9EF;
+  color: #66d9ef;
 }
 
 pre .class .title {
-  color: white;
+  color: #fafafa;
 }
 
 pre .attribute,
@@ -304,7 +462,7 @@ pre .symbol,
 pre .symbol .string,
 pre .value,
 pre .regexp {
-  color: #BF79DB;
+  color: #bf79db;
 }
 
 pre .tag .value,
@@ -332,7 +490,7 @@ pre .apache .tag,
 pre .apache .cbracket,
 pre .tex .command,
 pre .prompt {
-  color: #A6E22E;
+  color: #a6e22e;
 }
 
 pre .comment,
@@ -345,7 +503,7 @@ pre .deletion,
 pre .shebang,
 pre .apache .sqbracket,
 pre .tex .formula {
-  color: #75715E;
+  color: #75715e;
 }
 
 pre .keyword,
@@ -366,7 +524,7 @@ pre .apache .tag,
 pre .tex .special,
 pre .request,
 pre .status {
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 pre .coffeescript .javascript,
@@ -376,13 +534,11 @@ pre .xml .javascript,
 pre .xml .vbscript,
 pre .xml .css,
 pre .xml .cdata {
-  opacity: 0.5;
+  opacity: .5;
 }
 
-/* responsiveness */
-
+/* Responsiveness */
 @media (max-width: 850px) {
-
   body {
     font-size: 70%;
   }
@@ -392,33 +548,35 @@ pre .xml .cdata {
   }
 
   img {
-    border-radius: 3px;
     width: 100%;
+    border-radius: 3px;
   }
 
   h1 {
     margin-top: 120px;
   }
 
-  .prev, .prev:hover {
-    border-right-color: rgba(135, 135, 135, 0.5);
+  .prev,
+  .prev:hover {
+    border-right-color: rgba(135, 135, 135, .5);
   }
 
-  .next, .next:hover {
-    border-left-color: rgba(135, 135, 135, 0.5);
+  .next,
+  .next:hover {
+    border-left-color: rgba(135, 135, 135, .5);
   }
 }
 
 @media (max-width: 480px) {
   body {
-    font-size: 50%;
     overflow: hidden;
+    font-size: 50%;
   }
 
   .slide-content {
+    height: 340px;
     padding: 10px;
     margin-top: 10px;
-    height: 340px;
   }
 
   h1 {
@@ -444,22 +602,23 @@ pre .xml .cdata {
   }
 
   html {
-    width: 100%;
     height: 100%;
+    width: 100%;
     overflow: visible;
   }
 
   body {
-    margin: 0 auto !important;
-    border: 0;
-    padding: 0;
     float: none !important;
+    padding: 0;
+    margin: 0 auto !important;
     overflow: visible;
-    background: none !important;
     font-size: 52%;
+    background: none !important;
+    border: 0;
   }
 
-  .progress, .controls {
+  .progress,
+  .controls {
     display: none;
   }
 
@@ -468,11 +627,11 @@ pre .xml .cdata {
   }
 
   .slide-content {
-    border: 1px solid #222;
     margin-top: 0;
     margin-bottom: 40px;
     height: 3.5in;
     overflow: visible;
+    border: 1px solid #222;
   }
 
   .slide:nth-child(even) {
@@ -495,7 +654,7 @@ pre .xml .cdata {
   </div>
   <div class="slide hidden" id="slide-2">
     <section class="slide-content"><h3 id="cleaver-light">Cleaver Light</h3>
-<p><strong>Cleaver</strong> <em>Light</em> builds on <a href="http://github.com/jdan/cleaver-retro">Cleaver Retro</a>, uses <strong><em>Open Sans</em></strong> for the body text, Merriweather for the headings and Adobe&#39;s Source Code Pro for <code>code</code>.</p>
+<p><strong>Cleaver</strong> <em>Light</em> builds on <a href="http://github.com/jdan/cleaver-retro">Cleaver Retro</a>, uses <strong><em>Open Sans</em></strong> for the body text, Merriweather for the headings and Adobe&#39;s Source Code Pro for <code>@code</code>.</p>
 <hr>
 <blockquote>
 <p>It&#39;s pretty cool.</p>
@@ -547,24 +706,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit aliquam 
   <div class="slide hidden" id="slide-6">
     <section class="slide-content"><h3 id="unicode">Unicode</h3>
 <ul>
-<li>██████████ █████</li>
 <li>林花謝了春紅 太匆匆</li>
 <li>胭脂淚 留人醉 幾時重</li>
 <li>Matching Pairs «»‹› “”‘’「」〈〉《》〔〕</li>
 <li>Greek αβγδ εζηθ ικλμ νξοπ ρςτυ φχψω</li>
-<li>currency  ¤ $ ¢ € ₠ £ ¥</li>
+<li>currency ¤ $ ¢ € ₠ £ ¥</li>
 </ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><pre><code class="lang-ruby"><span class="class"><span class="keyword">class</span> <span class="title">Doge</span></span>
-  <span class="function"><span class="keyword">def</span> <span class="title">bark</span></span>
-    puts <span class="string">"Woof!"</span>
-  <span class="keyword">end</span>
-<span class="keyword">end</span></code></pre>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-8">
     <section class="slide-content"><h3 id="a-code-example">A code example</h3>
 <pre><code class="lang-ruby"><span class="comment"># comment</span>
 <span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>
@@ -578,7 +728,7 @@ skippy.bark()</code></pre>
 <p>And here is some <code>inline code</code> to check out.</p>
 </section>
   </div>
-  <div class="slide hidden  center" id="slide-9">
+  <div class="slide hidden  center" id="slide-8">
     <section class="slide-content"><p><img class="badge" src="https://pbs.twimg.com/profile_images/527211840250474496/UmC1pY-x.png" alt="@svdb"></p>
 <h3 id="sjaak-van-den-berg">Sjaak van den Berg</h3>
 <p>Email: <a href="mailto:mail@svdb.co">mail@svdb.co</a><br />
@@ -590,18 +740,12 @@ Web: <a href="http://svdb.co">svdb.co</a></p>
 
 
   <script type="text/javascript">
-    /**
- * Returns the current page number of the presentation.
- */
+    /* Returns the current page number of the presentation */
 function currentPosition() {
   return parseInt(document.querySelector('.slide:not(.hidden)').id.slice(6));
 }
 
-
-/**
- * Navigates forward n pages
- * If n is negative, we will navigate in reverse
- */
+/* Navigates forward n pages (navigate in reverse if n is negative) */
 function navigate(n) {
   var position = currentPosition();
   var numSlides = document.getElementsByClassName('slide').length;
@@ -620,18 +764,12 @@ function navigate(n) {
   updateTabIndex();
 }
 
-
-/**
- * Updates the current URL to include a hashtag of the current page number.
- */
+/* Updates the current URL to include a hashtag of the current page number */
 function updateURL() {
-  window.history.replaceState({} , null, '#' + currentPosition());
+  window.location.hash = currentPosition();
 }
 
-
-/**
- * Sets the progress indicator.
- */
+/* Sets the progress indicator */
 function updateProgress() {
   var progressBar = document.querySelector('.progress-bar');
 
@@ -642,7 +780,6 @@ function updateProgress() {
     progressBar.style.width = percent.toString() + '%';
   }
 }
-
 
 /**
  * Removes tabindex property from all links on the current slide, sets
@@ -664,9 +801,7 @@ function updateTabIndex() {
   }
 }
 
-/**
- * Determines whether or not we are currently in full screen mode
- */
+/* Determines whether or not we are currently in full screen mode */
 function isFullScreen() {
   return document.fullscreenElement ||
          document.mozFullScreenElement ||
